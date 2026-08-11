@@ -10,7 +10,7 @@ import {
   FaGithubSquare,
 } from "react-icons/fa";
 
-const sublinks = [
+const pages = [
   {
     pageId: crypto.randomUUID(),
     page: "product",
@@ -85,4 +85,4 @@ const sublinks = [
   },
 ];
 
-export default sublinks;
+export default pages;
