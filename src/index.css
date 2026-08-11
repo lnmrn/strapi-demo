@@ -293,7 +293,7 @@ nav {
 }
 
 .toggle-btn:focus {
-  outline: none;
+  outline: thick double var(--white);
 }
 
 /* hero */
