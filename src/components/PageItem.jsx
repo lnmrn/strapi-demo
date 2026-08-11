@@ -8,7 +8,12 @@ function PageItem({ item }) {
       <h4>{page}</h4>
       <div className="sidebar-sublinks">
         {links.map((link) => (
-          <LinkItem link={link} key={link.id} />
+          <LinkItem
+            link={link}
+            key={link.id}
+            linkStyle="sidebar-anchor"
+            iconStyle="sublink-icon"
+          />
         ))}
       </div>
     </section>

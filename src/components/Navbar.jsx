@@ -1,15 +1,22 @@
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { useGlobalContext } from "../GlobalContext";
 
 function Navbar() {
-  const { setIsSidebarOpen } = useGlobalContext();
+  const { isSidebarOpen, setIsSidebarOpen } = useGlobalContext();
+
   return (
     <nav>
       <div className="nav-center">
         <h3 className="logo">strapi</h3>
-        <button className="toggle-btn" onClick={() => setIsSidebarOpen(true)}>
-          <FaBars />
-        </button>
+        {isSidebarOpen ? (
+          <button className="close-btn" onClick={() => setIsSidebarOpen(false)}>
+            <FaTimes />
+          </button>
+        ) : (
+          <button className="toggle-btn" onClick={() => setIsSidebarOpen(true)}>
+            <FaBars />
+          </button>
+        )}
       </div>
     </nav>
   );

@@ -7,11 +7,8 @@ import PageItem from "./PageItem";
 function Sidebar() {
   const { isSidebarOpen, setIsSidebarOpen } = useGlobalContext();
   return (
-    <aside className="sidebar">
+    <aside className={`${isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}`}>
       <div className="sidebar-container">
-        <button className="close-btn">
-          <FaTimes />
-        </button>
         <div className="sidebar-links">
           {pages.map((item) => (
             <PageItem item={item} key={item.pageId} />
