@@ -413,3 +413,29 @@ nav {
     display: none;
   }
 }
+
+/* 992px navlinks */
+.nav-links {
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  .nav-links {
+    display: flex;
+    justify-content: center;
+  }
+  .nav-center {
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+  .nav-button {
+    padding: 0 1rem;
+    color: var(--white);
+    background: transparent;
+    border: transparent;
+    text-transform: capitalize;
+    font-size: 1.25rem;
+    letter-spacing: var(--letterSpacing);
+    cursor: pointer;
+  }
+}
