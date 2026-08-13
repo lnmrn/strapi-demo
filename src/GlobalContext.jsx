@@ -3,9 +3,12 @@ import { createContext, useContext, useState } from "react";
 const AppContext = createContext();
 
 function GlobalContext({ children }) {
+  const [pageId, setPageId] = useState(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   return (
-    <AppContext.Provider value={{ isSidebarOpen, setIsSidebarOpen }}>
+    <AppContext.Provider
+      value={{ isSidebarOpen, setIsSidebarOpen, pageId, setPageId }}
+    >
       {children}
     </AppContext.Provider>
   );
