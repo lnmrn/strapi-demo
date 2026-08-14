@@ -7,8 +7,15 @@ function Submenu() {
   const { pageId, setPageId } = useGlobalContext();
   const currentPage = pages.find((page) => page.pageId === pageId);
 
+  function handleMouseLeave(e) {
+    setPageId(null);
+  }
+
   return (
-    <div className={currentPage ? "submenu show-submenu" : "submenu"}>
+    <div
+      onMouseLeave={handleMouseLeave}
+      className={currentPage ? "submenu show-submenu" : "submenu"}
+    >
       <h5>{currentPage?.page}</h5>
       <div
         style={{
