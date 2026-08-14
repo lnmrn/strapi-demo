@@ -8,7 +8,7 @@ function Submenu() {
   const currentPage = pages.find((page) => page.pageId === pageId);
 
   return (
-    <div className="submenu">
+    <div className={currentPage ? "submenu show-submenu" : "submenu"}>
       <h5>{currentPage?.page}</h5>
       <div
         style={{
@@ -18,7 +18,7 @@ function Submenu() {
         className="submenu-links"
       >
         {currentPage?.links?.map((link) => (
-          <LinkItem key={link.id} link={link} />
+          <LinkItem key={link.id} link={link} iconStyle="sublink-icon" />
         ))}
       </div>
     </div>
