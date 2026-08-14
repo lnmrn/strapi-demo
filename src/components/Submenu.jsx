@@ -7,7 +7,7 @@ function Submenu() {
   const { pageId, setPageId } = useGlobalContext();
   const currentPage = pages.find((page) => page.pageId === pageId);
 
-  function handleMouseLeave(e) {
+  function handleMouseLeave() {
     setPageId(null);
   }
 
